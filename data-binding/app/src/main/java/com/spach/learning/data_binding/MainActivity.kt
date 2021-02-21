@@ -14,9 +14,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main)
         bi.person = getData()
+        bi.callback = this
     }
 
     private fun getData(): Person {
-        return Person("Seth Pacheco", 27)
+        return Person("Seth Pacheco:", 27)
+    }
+
+    fun onSubmit() {
+        if (bi.editText.text.toString().isNotEmpty()) {
+            val text = bi.editText.text.toString()
+            bi.textView.text = text
+        }
     }
 }
