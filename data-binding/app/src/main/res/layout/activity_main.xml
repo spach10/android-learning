@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="com.spach.learning.data_binding.MainActivity" />
+            type="com.spach.learning.data_binding.MainActivity.MainActivityOnClick" />
     </data>
 
 
